@@ -1,0 +1,27 @@
+RESUME
+John J Jingleheimer-Schmidt
+jjjschmidt@gmail.com
+
+<Education>
+
+MS in Software Engineering,
+UMaryland, 2005
+
+BS in Psychology,
+Johns Hopkins U, 2002
+
+
+<Experience>
+
+Software Developer II
+Amtrak, June 2015 - Present
+
+- Duty 1, Lorem ipsum
+- Duty 2, Gaudeamos Igitur Iuvenes Dum Somos
+- Duty 3, DCPS
+
+
+<Skills>
+
+PHP, highly skilled
+

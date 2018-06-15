@@ -66,15 +66,15 @@ public class Work {
         String display="";
         for(Duty duty : duties)
         {
-            display =display+duty.toString();
+            display =display+"\r\n"+duty.toString();
         }
         return display;
     }
 
     public String toString()
     {
-        String display = position+"\n"+companyName+", "+startMonthYear
-                +" - "+endMonthYear+"\n"+displayDuty();
+        String display = position+"\r\n"+companyName+", "+startMonthYear
+                +" - "+endMonthYear+"\r\n"+displayDuty();
         return display;
     }
 }

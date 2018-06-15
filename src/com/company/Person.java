@@ -66,7 +66,7 @@ public class Person {
     {
         String display="";
         for(Education edu : eduHistory) {
-            display = display+"\n"+edu.toString()+"\n";
+            display = display+"\r\n"+edu.toString()+"\r\n";
         }
         return display;
     }
@@ -76,7 +76,7 @@ public class Person {
         String display="";
         for(Work work : works)
         {
-            display =display+"\n"+work.toString()+"\n";
+            display =display+"\r\n"+work.toString()+"\r\n";
         }
         return display;
     }
@@ -86,15 +86,15 @@ public class Person {
         String display="";
         for(Skills skill : skills)
         {
-            display =display+"\n"+skill.toString()+"\n";
+            display =display+"\r\n"+skill.toString()+"\r\n";
         }
         return display;
     }
 
     public String toString()
     {
-        String display = "RESUME\n"+name+"\n"+email+"\n\n"+"<Education>\n"
-                +displayEdu()+"\n\n<Experience>\n"+displayWork()+"\n\n<Skills>\n"+displaySkill();
+        String display = "RESUME\r\n"+name+"\r\n"+email+"\r\n\r\n"+"<Education>\r\n"
+                +displayEdu()+"\r\n\n<Experience>\r\n"+displayWork()+"\r\n\n<Skills>\r\n"+displaySkill();
         return display;
     }
 }

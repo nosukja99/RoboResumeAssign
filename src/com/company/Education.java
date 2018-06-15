@@ -44,7 +44,7 @@ public class Education {
 
     public String toString()
     {
-        String display = major+",\n"+schloolName+", "+graduateYear;
+        String display = major+",\r\n"+schloolName+", "+graduateYear;
         return display;
     }
 }

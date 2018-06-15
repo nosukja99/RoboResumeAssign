@@ -1,11 +1,10 @@
 package com.company;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.*;
 
 public class MakeResume {
+    static Person person;
 
     public static void main (String [] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -81,7 +80,7 @@ public class MakeResume {
         ///////////////////////////////////work history
 
         System.out.println("From now on,Please add your work experience.");
-        System.out.println("Do you want to add work experience?");
+        System.out.println("Do you want to add work experience?<y/n>");
         String moreWork = br.readLine();
         while(!moreWork.equalsIgnoreCase("n"))
         {
@@ -152,8 +151,23 @@ public class MakeResume {
             moreSkills =br.readLine();
         }
         //////////////////////////////Person
-        Person person = new Person(name, email, eduHistory, works, skills);
+        person = new Person(name, email, eduHistory, works, skills);
         System.out.println("============================================================");
         System.out.println(person.toString());
+        writeFile();
     }
+
+   public static void writeFile()
+   {
+       System.out.println((System.getProperty("user.dir") + File.separatorChar +"myResume.txt"));
+       String filename = (System.getProperty("user.dir") + File.separatorChar +"myResume.txt");
+       PrintWriter writer;
+       try {
+           writer = new PrintWriter(new File(filename));
+           writer.println(person.toString());
+           writer.close();
+       } catch (FileNotFoundException e1) {
+           e1.printStackTrace();
+       }
+   }
 }
