@@ -93,8 +93,15 @@ public class MakeResume {
                 System.out.println("What is the company name?");
                 companyName = br.readLine();
             }
-            System.out.println("What is the your position at the company?");
+            System.out.println("What is your position at the company?");
             String position=br.readLine();
+            while(position.equals(""))
+            {
+                System.out.println("Please enter valid position.");
+                System.out.println("What is your position at the company?");
+                position = br.readLine();
+            }
+
             System.out.println("From when did you start to?<Month Year>");
             String startMonthYear = br.readLine();
             System.out.println("Until when did you work?<Month Year>");
